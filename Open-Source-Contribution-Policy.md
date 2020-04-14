@@ -1,10 +1,10 @@
 # Richtlinie Ril-XXXX **Open Source Contribution**
 
-  Version 002
+  Version 2.1
   \
   DB Systel GmbH
   \
-  Datum 31.01.2019
+  Datum 24.03.2020
 
 Diese Richtlinie regelt einmalige und wiederkehrende Beiträge zu Open Source Projekten sowie deren Erstveröffentlichung.
 
@@ -121,6 +121,9 @@ Der Freigabeprozess erfolgt elektronisch per Email:
 
 (7) Der Freigebende teilt die Entscheidung zur Contribution bzw. Neuveröffentlichung per Email dem Antragsteller mit, Kopie an den Open Source Steward. Diese Email muss digital signiert oder anderswertig authentifiziert werden. In der Mail beauftragt der Freigebende den Antragsteller, die Contribution bzw. Neuveröffentlichung im Namen der DB Systel durchzuführen.
 
+(8) Bei wiederkehrenden Beiträgen gelten zudem die Auflagen für
++wiederkehrende Beiträge (s.u.)
+
 Contribution
 ------------
 
@@ -135,8 +138,18 @@ Im Fall der Freigabe der Neuveröffentlichung ist der Antragsteller damit beauft
 
 Die Neuveröffentlichung erfolgt im Namen der DB Systel.
 
+Bei Neuveröffentlichungen gelten zudem immer die Auflagen für wiederkehrende Beiträge.
 
+Auflagen für wiederkehrende Beiträge
+------------------------------------
 
+Bei wiederkehrenden Beiträgen erfolgen mehrere Contributions zum selben Projekt über einen längeren Zeitraum. Die Freigabe der Open Source Contribution oder Neuveröffentlichung gilt bis auf weiteres. Sobald sich eine der folgenden Rahmenbedingungen oder Angaben aus dem Antrag ändern, erlischt die Freigabe. Bei Bedarf müssen die (neuen) Autoren den Freigabeprozess bzw. vereinfachten Freigabeprozess neu durchlaufen:
+
+* Neue Autoren, Führungskräfte oder Product Owner.
+* Neue Themenfelder.
+* Neue Risiken über X €.
+
+Darüber hinaus müssen für wiederkehrende Beiträge regelmäßig, spätestens alle 12 Monate, die Antragsteller per Email dem Open Source Steward über den Status ihrer Beiträge berichten und dabei auch die getroffenen Maßnahmen zur dauerhaften Einhaltung der o.g. Kriterien nennen.
 
 [^1]: siehe <https://opensource.org/licenses> (Stand 22.05.2018)
 
