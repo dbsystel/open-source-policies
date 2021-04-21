@@ -1,10 +1,10 @@
 # Richtlinie Ril-XXXX **Open Source Contribution**
 
-  Version 2.1
+  Version 2.2
   \
   DB Systel GmbH
   \
-  Datum 24.03.2020
+  Datum 19.03.2021
 
 Diese Richtlinie regelt einmalige und wiederkehrende Beiträge zu Open Source Projekten sowie deren Erstveröffentlichung.
 
@@ -66,7 +66,7 @@ Zu beachtende Grundsätze
 
 Im Zusammenhang mit geplanten Contributions und Neuveröffentlichungen ist insbesondere Folgendes zu beachten:
 
-(1) Urheber im Sinne des Urhebergesetzes ist der Mitarbeiter der DB Systel, der die Software für DB Systel geschrieben hat. Alle wirtschaftlichen Rechte an der Software stehen dabei der DB Systel als Arbeitgeber zu.
+(1) Urheber im Sinne des Urhebergesetzes ist der Mitarbeiter der DB Systel, der die Software für DB Systel geschrieben hat. Alle wirtschaftlichen Rechte an im Rahmen des Arbeitsverhätnisses entstandener Software stehen dabei der DB Systel als Arbeitgeber zu. Privat oder im Rahmen von Nebentätigkeiten erstellte Software wird nicht von dieser Richtlinie abgedeckt.
 
 (2) Der Einsatz von Open Source bei DB Systel unterliegt den Open Source Einsatzgrundsätzen.
 
@@ -82,7 +82,7 @@ Im Zusammenhang mit geplanten Contributions und Neuveröffentlichungen ist insbe
 
 (8) Wichtig ist, dass der Antragsteller mit dem Urheber nachweislich geklärt hat, dass der Urheber den Code vollständig selbst geschrieben hat und es keine Hinweise auf eine Beteiligung Dritter oder das Einbringen fremden Codes gibt. Auch der ursprüngliche Code muss kritisch betrachtet werden.
 
-(9) Es dürfen keine Geschäftsgeheimnisse oder „geistiges Eigentum" / Intellectual Property der DB Systel, ihrer Kunden oder sonstiger Dritter veröffentlicht werden, z.B. auch nicht in Form von Forenbeiträgen oder Codebeispielen.
+(9) Es dürfen keine Geschäftsgeheimnisse der DB Systel, ihrer Kunden oder sonstiger Dritter veröffentlicht werden, z.B. auch nicht in Form von Forenbeiträgen oder Codebeispielen. Rechte an „geistigem Eigentum“ / Intellectual Property der DB Systel werden nur im Rahmen der gewählten Open-Source-Lizenz erteilt. Das schließt Nutzungsrechte nach dem Urheberrecht ("Copyright") und gegebenenfalls Patentrechte ein, jedoch keine Rechte an Marken der DB.
 
 (10) Falls die Contribution oder Neuveröffentlichung eine Erfindung beinhaltet, so ist diese der Patentabteilung der Deutschen Bahn per Email an *EMAIL REMOVED* anzuzeigen und deren Zustimmung zur zeitnahen Veröffentlichung einzuholen. Dies ist insbesondere dann der Fall, wenn die Contribution oder Neuveröffentlichung eine neue und von der Implementierungssprache unabhängige technische Lehre zur Lösung eines Problems enthält.
 
@@ -150,6 +150,15 @@ Bei wiederkehrenden Beiträgen erfolgen mehrere Contributions zum selben Projekt
 * Neue Risiken über X €.
 
 Darüber hinaus müssen für wiederkehrende Beiträge regelmäßig, spätestens alle 12 Monate, die Antragsteller per Email dem Open Source Steward über den Status ihrer Beiträge berichten und dabei auch die getroffenen Maßnahmen zur dauerhaften Einhaltung der o.g. Kriterien nennen.
+
+Contributions zu von DB Systel geführten Projekten
+--------------------------------------------------
+
+Für Projekte, die von DB Systel als Maintainer geführt werden, gilt ein vereinfachter Contribution-Prozess für DB Systel Mitarbeiter.  Voraussetzung ist, dass für diese Projekte eine Freigabe als Neuveröffentlichung erfolgt ist, und die Maintainer des Projektes in der Freigabe genannt sind.
+
+DB Systel Mitarbeiter können Contributions zu diesen Projekten leisten, ohne eine separate Freigabe zu benötigen. Sie müssen sich vor der Contribution mit den Rahmenbedingungen für Contributions, die in dieser Richtlinie festgelegt sind, vertraut machen. Die Maintainer der Projekte sind verantwortlich dafür, dass die Rahmenbedingungen eingehalten werden.
+
+Im Rahmen der jährlichen Überprüfung für wiederkehrende Contributions muss die Liste der Autoren aktualisiert werden, so dass sie alle von DB Systel getätigten Contributions erfasst.
 
 [^1]: siehe <https://opensource.org/licenses> (Stand 22.05.2018)
 
