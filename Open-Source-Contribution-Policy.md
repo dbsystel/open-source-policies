@@ -92,7 +92,7 @@ Im Zusammenhang mit geplanten Contributions und Neuveröffentlichungen ist insbe
 
 (13) Für jedes geplante Contributions- oder Neuveröffentlichungsvorhaben ist eine Risikobewertung zu erstellen. Der Umfang der Risikobewertung hängt vom Risiko ab.
 
-(14) Falls dem Open Source Projekt bzw. der Contribution ein Contributor Agreement oder andere Bedingungen zugrunde liegen, sind diese auf Veranlassung des Antragstellers vorab zentral pro Agreementversion durch den *REMOVED* Der *REMOVED* bezieht dabei die Rechtsabteilung entsprechen der Konzernrichtline Risikominimierung ein.
+(14) Falls dem Open Source Projekt bzw. der Contribution ein Contributor Agreement oder andere Bedingungen zugrunde liegen, sind diese auf Veranlassung des Antragstellers vorab zentral pro Agreementversion durch den *REMOVED* Der *REMOVED* bezieht dabei die Rechtsabteilung entsprechend der Konzernrichtline Risikominimierung ein.
 
 (15) Aus der dem Antrag beiliegenden Kosten- und Risikoeinschätzung müssen sich die mit der Contribution bzw. Neuveröffentlichung angestrebten Vorteile und die möglichen Nachteile für DB Systel und DB ergeben.
 
