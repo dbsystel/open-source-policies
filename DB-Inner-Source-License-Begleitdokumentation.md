@@ -103,6 +103,8 @@ Material
 
 -   [InnerSource Commons](https://innersourcecommons.org/) - Community-Ressourcen aus der Praxis zum Thema Inner Source
 
+-   [InnerSource License pattern](https://patterns.innersourcecommons.org/p/innersource-license) - Beschreibung von Problemstellung, Firmenkontext und weiteren Faktoren, die bei der Entwicklung einer firmeninternen InnerSource Lizenz zu berücksichtigen sind
+
 -   [Adopting Inner Source, Principles and Case Studies](https://innersourcecommons.org/resources/books/adoptinginnersource/) - Buch mit Fallstudien von erfolgreicher Anwendung von Inner Source in Unternehmen wie Bosch, Ericsson oder Paypal
 
 **Open Source Lizenzen**
