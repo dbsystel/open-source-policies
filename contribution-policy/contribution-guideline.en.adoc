@@ -1,0 +1,145 @@
+include::variables.en.adoc[]
+
+= Guideline {guideline-id}: Open Source Contribution
+:title-page:
+
+This guideline regulates one-off and recurring contributions to open source projects and their initial publication.
+
+The text of this policy is {classification-internal}, a public version, in which specific numbers and names are removed, can also be found as {classification-open} on {public-link}.
+
+== General document information
+
+//tag::history[]
+=== Change history
+
+include::contribution-guideline-history.en.adoc[]
+//end::history[]
+
+=== Publication
+
+include::contribution-guideline-publication.en.adoc[]
+
+=== Scope
+
+This guideline regulates the requirements for the release of software code written by {company} employees on behalf of {company} as open source under suitable Open Source Licenses in the context of certain Open Source Software projects (so-called Contributions and New Publications).
+
+== Objective
+
+The aim of the guideline is to clearly regulate the requirements for release, the procedure, and the responsibilities for open source contributions at {company} and, in particular, to ensure that all considerations and decisions made by the parties involved in this context are documented in a comprehensible manner and that risks for {company-general} are minimized.
+
+== Risks and controls
+
+Compliance with this policy avoids the following risks:
+
+* Infringements of copyright and third-party industrial property rights and associated negative consequences for {company} or the open source projects to which Contributions are made.
+* Unintentional publication of internal information such as intellectual property (IP) and trade secrets of {company} and its customers.
+* Unwanted obligations arising from framework agreements and other contribution agreements of open source projects and repositories without review.
+* Economic disadvantages due to non-participation in open source projects.
+* Loss of reputation for {company} due to inappropriate appearance in the open source community.
+
+Compliance with the policy is monitored by:
+
+* Central management and control of all contribution approvals by the {open-source-manager}.
+* Two-person rule for individual contribution approvals.
+* Periodic and event-driven reviews by the {open-source-manager}.
+
+== Definitions of terms
+
+[arabic]
+. *Applicant* means the {company} employee who requests the release of the Contribution as part of an Open Source Software project by the Approver.
+. *Author* means the author(s) of the Contribution.
+. *Approvers* means the roles named in Clause 6 that make the decision on behalf of {company} regarding the release of the Contribution as part of an Open Source Software Project.
+. *Open Source Software* within the meaning of this policy is software whose source code is publicly available and can be viewed, modified, and used by third parties.
+. *Open Source Licenses* are all licenses managed by the Open Source Initiative footnote:[see https://opensource.org/licenses (as of 22.05.2018)].
+. The *{open-source-manager}* operationalizes an open source process ("use", "contribute"), introduces it in {company}, and is responsible for compliance.
+. *Forks* are derivations or copies of existing software projects. The software development process on popular platforms such as GitHub is based on creating your own fork, improving the software in this fork, and offering the original project to adopt the changes.
+. *Upstream Projects* are software projects from which a Fork has been created.
+. *Bugfix* is a functional correction of existing features without the addition of new capabilities.
+. *Contribution* is the contribution of code, documentation, or other components to an existing Open Source Software project.
+. *New Publication* is the creation of a new open source project and the selection of the Open Source License for the new project. Typically, the new release is immediately followed by an initial Contribution. We therefore consider both together here.
+. The *Value* of a Contribution or New Publication is calculated from the effort required to create it or from the revenue from a specific commercial exploitation, whichever is higher footnote: [For example, code that took an employee with a personal billing rate of €500/day a total of 10 workdays to create is worth at least €5000].
+
+== Framework conditions and approval of open source contributions
+
+=== Background
+
+Software development today is often based on the use of Open Source Software and open source components. This speeds up and reduces the cost of development and enables direct participation in global innovation. By participating in open source projects, costs and risks can be reduced for those involved.
+
+By actively participating in the open source community and corresponding projects whose software components are used by {company-general}, {company-general} can minimize maintenance costs and avoid having to maintain its own Forks of Open Source Software.
+
+{company-general} can influence the direction and design of open source projects, e.g., by creating a common standard through reference implementation.
+
+=== Principles to be observed
+
+In connection with planned Contributions and New Publications, the following must be observed in particular:
+
+[arabic]
+. The Author within the meaning of copyright law is the {company} employee who wrote the software for {company}. {company} as the employer is entitled to all economic rights to software created within the scope of the employment relationship. Software created privately or as part of secondary employment is not covered by this policy.
+. The use of open source at {company} is subject to the open source usage principles footnote:[See {link-usage-policy}].
+. The license conditions applicable to the Open Source Software used must be determined and documented by those responsible in accordance with the principles and must be observed during use.
+. The provision of modified code for an Open Source Software project generally constitutes a distribution within the meaning of the Open Source Licenses, to which license obligations are attached.
+. Existing license notices and copyright notices in the Open Source Software must be retained.
+. Changes to the source code of the Open Source Software and other Contributions by {company} must be marked.
+. {company}'s own Contribution shall be marked in accordance with the specifications of the open source project and {company}. When using version control systems such as git, the official email address must be used for the commits. When submitting patches by email, these must be sent from the company email address.
+. It is important that the Applicant has demonstrably clarified with the Author that the Author has written the code entirely themselves and that there is no evidence of third-party involvement or the introduction of third-party code. The original code must also be viewed critically.
+. No trade secrets of {company}, its customers, or other third parties may be published, e.g., not even in the form of forum posts or code examples. Intellectual property rights of {company} are only granted within the scope of the selected Open Source License. This includes rights of use under copyright and, where applicable, patent rights, but no rights to {company-general} trademarks.
+. If the Contribution or New Publication contains an invention, this must be reported to {contact-patent-department} and their consent for prompt publication must be obtained. This is particularly the case if the Contribution or New Publication contains a new technical teaching for solving a problem that is independent of the implementation language.
+. In the case of Contributions created to meet specific customer requirements (e.g., for other group companies), the contractual situation with the customer (rights, confidentiality) must be clarified. If the rights lie with the customer, the customer must authorize publication.
+. Not only third-party copyrights, but also software patents, trademark laws, and other third-party rights may prevent a planned Contribution or New Publication.
+. A risk assessment must be prepared for each planned Contribution or New Publication project. The scope of the risk assessment depends on the risk.
+. If the open source project or Contribution is based on a contributor agreement or other conditions, these must be checked in advance centrally per agreement version by the {open-source-manager} at the request of the Applicant. The {open-source-manager} involves the legal department in accordance with the {guideline-risk-minimization}.
+. The cost and risk assessment attached to the application must show the advantages and possible disadvantages for {company} and {company-general} intended by the Contribution or New Publication.
+. In the case of New Publications, the Applicant shall select a license suitable for the new open source project and justify the selection if it does not use one of the standard licenses offered in the online form. This license must be included in the New Publication.
+. When dealing with open source projects, discussion forums, etc., the principles for dealing with social media footnote:[See also {social-media-guidelines}] of the group apply, see also {communication-guideline}. In particular, no statements may be made on behalf of the company that could imply obligations for {company}.
+
+=== Approval process
+
+The approval process is subject to the following framework conditions:
+
+[arabic]
+. For Contributions and New Publications up to a Value of {threshold-value}, approval by the Applicant's manager or by the product owner responsible for the topic is sufficient.
+. A second approval by the {open-source-manager} or the {open-source-board-member} is required for Contributions or New Publications with a Value of {threshold-value} or more or an economic risk greater than {threshold-value}.
+. The approval process takes place in coordination with the {open-source-manager}, who ensures the necessary qualification of the Applicants and Approvers.
+
+The approval process is carried out electronically by email:
+
+[arabic, start=4]
+. The Applicant fills in the {link-application} with the details of the Contribution or the New Publication and sends the necessary documents by email to the responsible Approver and the {open-source-manager}.
+. The Approver checks the project and the risk assessment in consultation with the {open-source-manager}. If necessary, the {open-source-manager} carries out a technical and content review and involves the legal department in legal issues in accordance with the {risk-minimization-guideline}.
+. The {open-source-manager} documents and archives the decision and its basis.
+. The Approver informs the Applicant of the decision to do a Contribution or New Publication by email, with a copy to the {open-source-manager}. This email must be digitally signed or otherwise authenticated. In the email, the Approver instructs the Applicant to carry out the Contribution or New Publication on behalf of {company}.
+. In the case of recurring Contributions, the rules for recurring Contributions also apply (see below).
+
+=== Contribution
+
+If the Contribution is approved, the Applicant is tasked with making the Contribution in accordance with the framework and license conditions of the open source project. The Contribution must be identified as "on behalf of {company-formal}". When using version control systems such as git, the official email address must be used for the commits. When submitting patches by email, these must be sent from the company email address. The Applicant may use their personal online identities to interact with the open source project, e.g. on GitHub.
+
+The Contribution is made in the name of {company}.
+
+=== New Publication
+
+If the New Publication is approved, the Applicant is commissioned to carry out the New Publication, stating the selected Open Source License. The Contribution must be marked as "on behalf of {company-formal}". When using version control systems such as git, the official email address must be used for the commits. When submitting patches by email, these must be sent from the company email address. The Applicant may use their personal online identities for the publication of the open source project, e.g. on GitHub.
+
+The New Publication is made in the name of {company}.
+
+The rules for recurring Contributions also always apply to New Publications.
+
+=== Rules for recurring contributions
+
+In the case of recurring Contributions, several Contributions are made to the same project over a longer period of time. The release of the open source Contribution or New Publication is valid until further notice. As soon as one of the following conditions or details from the application change, the approval expires. If necessary, the (new) Authors must go through the approval process or simplified approval process again:
+
+* New Authors, managers or product owners.
+* New topics.
+* New risks over {threshold-value}.
+
+In addition, for recurring Contributions, Applicants must report regularly, at least every 12 months, by email to the {open-source-manager} on the status of their Contributions and also state the measures taken to ensure permanent compliance with the above criteria.
+
+=== Contributions to projects managed by {company}
+
+A simplified Contribution process for {company} employees applies to projects managed by {company} as maintainer. The prerequisite is that these projects have been released as New Publications and that the maintainers of the project are named in the release.
+
+{company} employees can make Contributions to these projects without requiring a separate release. They must familiarize themselves with the framework conditions for Contributions set out in this guideline before making a Contribution. The maintainers of the projects are responsible for ensuring that the framework conditions are adhered to.
+
+As part of the annual review for recurring Contributions, the list of Authors must be updated to include all Contributions made by {company}.
+
+include::contribution-guideline-trailer.en.adoc[]

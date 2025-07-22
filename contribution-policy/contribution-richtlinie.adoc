@@ -1,0 +1,145 @@
+include::variablen.adoc[]
+
+= Richtlinie {richtlinien-id}: Open Source Contribution
+:title-page:
+
+Diese Richtlinie regelt einmalige und wiederkehrende Beiträge zu Open Source Projekten sowie deren Erstveröffentlichung.
+
+Der Text dieser Richtlinie ist {klassifizierung-intern}, eine öffentliche Version, in der konkrete Zahlen und Namen entfernt sind, findet sich auch {klassifizierung-offen} auf {public-link}.
+
+== Allgemeine Dokumenteninformationen
+
+//tag::historie[]
+=== Änderungshistorie
+
+include::contribution-richtlinie-historie.adoc[]
+//end::historie[]
+
+=== Veröffentlichung
+
+include::contribution-richtlinie-veroeffentlichung.adoc[]
+
+=== Geltungsbereich
+
+Diese Richtlinie regelt die Voraussetzungen für die Freigabe für von {firma} Mitarbeitern im Auftrag von {firma} geschriebenem Software Code als Open Source unter geeigneten Open Source Lizenzen im Rahmen von bestimmten Open Source Softwareprojekten (sog. Contributions und Neuveröffentlichungen).
+
+== Zielsetzung
+
+Ziel der Richtlinie ist, die Voraussetzungen für eine Freigabe, die Vorgehensweise und die Verantwortlichkeiten bei {firma} für Open-Source-Contributions klar zu regeln und insbesondere dafür Sorge zu tragen, dass alle in diesem Zusammenhang getroffenen Abwägungen und Entscheidungen der Beteiligten nachvollziehbar dokumentiert werden und Risiken für {firma-generell} minimiert werden.
+
+== Risiken und Kontrollen
+
+Durch Einhaltung dieser Richtlinie werden die folgenden Risiken vermieden:
+
+* Verletzungen von Urheberrecht und gewerblichen Schutzrechten Dritter und damit verbundene negative Konsequenzen für {firma} oder die Open-Source-Projekte, zu denen Contributions gemacht werden
+* Ungewollte Veröffentlichung von internen Informationen wie des „geistigen Eigentums“ (Intellectual Property / IP) und der Geschäftsgeheimnisse der {firma} und ihrer Kunden
+* Ungeprüfte Entstehung von Verpflichtungen, die sich aus Rahmenverträgen und anderer Contribution Agreements der Open-Source-Projekte und Repositories ergeben
+* Wirtschaftliche Nachteile durch Nichtbeteiligung an Open-Source-Projekten
+* Reputationsverluste der {firma} durch nicht angemessenes Auftreten in der Open-Source-Community
+
+Die Einhaltung der Richtlinie wird kontrolliert durch:
+
+* Zentrale Steuerung und Prüfung aller Contribution-Freigaben durch den {open-source-manager}
+* Vier-Augen-Prinzip bei der einzelnen Contribution-Freigabe
+* Periodische und anlassbezogene Überprüfungen durch den {open-source-manager}
+
+== Begriffsdefinitionen
+
+[arabic]
+. *Antragsteller* meint den {firma} Mitarbeiter, der die Freigabe des Beitrages im Rahmen eines Open Source Software Projekts durch den Freigeber beantragt.
+. *Urheber* bezeichnet den/die Autor(en) des Beitrages.
+. *Freigabeberechtigte* bezeichnet die in Ziffer 6 genannten Rollen, die für {firma} die Entscheidung über die Freigabe des Beitrages im Rahmen eines Open Source Software Projekts treffen.
+. *Open Source Software* im Sinne dieser Richtlinie ist Software, deren Quelltext öffentlich und von Dritten eingesehen, geändert und genutzt werden kann.
+. *Open Source Lizenzen* sind alle von der Open Source Initiative geführten Lizenzen footnote:[siehe https://opensource.org/licenses (Stand 22.05.2018)]
+. Der *{open-source-manager}* operationalisiert einen Open Source Prozess (“use“, “contribute“), führt diesen in der {firma} ein und verantwortet die Einhaltung.
+. *Forks* sind Ableitungen oder Kopien von existierenden Softwareprojekten. Der Softwareentwicklungsprozess auf populären Plattformen wie GitHub basiert auf der Erstellung eines eigenen Forks, der Verbesserung der Software in diesem Fork und dem Angebot an das ursprüngliche Projekt, die Änderungen zu übernehmen.
+. *Upstream-Projekte* sind Softwareprojekte, von denen ein Fork erstellt wurde.
+. *Bugfix* ist eine funktionale Korrektur vorhandener Funktionen ohne die Hinzufügung neuer Fähigkeiten.
+. *Contribution* ist der Beitrag von Code, Dokumentation oder anderen Bestandteilen zu einem existierenden Open Source Softwareprojekt.
+. *Neuveröffentlichung* ist die Erstellung eines neuen Open Source Projektes und der Auswahl der Open Source Lizenz für das neue Projekt. Typischerweise folgt der Neuveröffentlichung unmittelbar eine initiale Contribution. Daher betrachten wir hier beides zusammen.
+. Der *Wert* einer Contribution oder Neuveröffentlichung errechnet sich aus dem Aufwand der Erstellung oder aus dem Ertrag einer konkreten kommerziellen Verwertung, je nachdem, welcher Wert höher ausfälltfootnote:[Zum Beispiel ist Code, für den ein Mitarbeiter mit einem persönlichen Verrechnungssatz von 500€/Tag insgesamt 10 Personentage zur Erstellung benötigte, mindestens 5000€ wert.].
+
+== Rahmenbedingungen und Freigabe von Open-Source-Contributions
+
+=== Hintergrund
+
+Softwareentwicklung basiert heute oft auf dem Einsatz von Open Source Software und Open Source Komponenten. Dies beschleunigt und vergünstigt die Entwicklung und ermöglicht die direkte Teilhabe an weltweit stattfindender Innovation. Durch die Beteiligung an Open Source Projekten können so für die Beteiligten zugleich Kosten und Risiken reduziert werden.
+
+Durch aktive Mitwirkung in der Open Source Gemeinschaft und entsprechenden Projekten, deren Softwarekomponenten von {firma-generell} selbst eingesetzt werden, kann die {firma-generell} gegebenenfalls Wartungsaufwände minimieren sowie die Pflege eigener Forks von Open Source Software vermeiden.
+
+Die {firma-generell} kann die Richtung und Ausgestaltung von Open Source Projekten beeinflussen, indem sie z.B. durch Referenzimplementierung einen gemeinsamen Standard schafft.
+
+=== Zu beachtende Grundsätze
+
+Im Zusammenhang mit geplanten Contributions und Neuveröffentlichungen ist insbesondere Folgendes zu beachten:
+
+[arabic]
+. Urheber im Sinne des Urhebergesetzes ist der Mitarbeiter der {firma}, der die Software für {firma} geschrieben hat. Alle wirtschaftlichen Rechte an im Rahmen des Arbeitsverhältnisses entstandener Software stehen dabei der {firma} als Arbeitgeber zu. Privat oder im Rahmen von Nebentätigkeiten erstellte Software wird nicht von dieser Richtlinie abgedeckt.
+. Der Einsatz von Open Source bei {firma} unterliegt den Open Source Einsatzgrundsätzenfootnote:[Siehe {link-einsatzrichtlinie}].
+. Die jeweils für die bearbeitete Open Source Software geltenden Lizenzbedingungen sind entsprechend den Grundsätzen von den Verantwortlichen zu ermitteln, zu dokumentieren und im Einsatz unbedingt zu beachten.
+. Die Bereitstellung des veränderten Codes für ein Open Source Software Projekt stellt in der Regel eine Distribution im Sinne des Open Source Lizenzen dar, an die Lizenzpflichten anknüpfen.
+. Bestehende Lizenzhinweise und Urheberrechtsvermerke in der Open Source Software sind zu belassen.
+. Änderungen im Source Code der Open Source Software und sonstige Beiträge der {firma} sind zu kennzeichnen.
+. Die Kennzeichnung des eigenen Beitrags der {firma} erfolgt entsprechend den Vorgaben des Open Source Projektes und der {firma}. Beim Einsatz von Versionskontrollsystemen wie git muss die dienstliche Emailadresse für die Commits benutzt werden. Beim Einsenden von Patches per Email müssen diese von der dienstlichen Emailadresse aus eingesendet werden.
+. Wichtig ist, dass der Antragsteller mit dem Urheber nachweislich geklärt hat, dass der Urheber den Code vollständig selbst geschrieben hat und es keine Hinweise auf eine Beteiligung Dritter oder das Einbringen fremden Codes gibt. Auch der ursprüngliche Code muss kritisch betrachtet werden.
+. Es dürfen keine Geschäftsgeheimnisse der {firma}, ihrer Kunden oder sonstiger Dritter veröffentlicht werden, z.B. auch nicht in Form von Forenbeiträgen oder Codebeispielen. Rechte an „geistigem Eigentum“ / Intellectual Property der {firma} werden nur im Rahmen der gewählten Open-Source-Lizenz erteilt. Das schließt Nutzungsrechte nach dem Urheberrecht ("Copyright") und gegebenenfalls Patentrechte ein, jedoch keine Rechte an Marken der {firma-generell}.
+. Falls die Contribution oder Neuveröffentlichung eine Erfindung beinhaltet, so ist diese der {kontakt-patentabteilung} anzuzeigen und deren Zustimmung zur zeitnahen Veröffentlichung einzuholen. Dies ist insbesondere dann der Fall, wenn die Contribution oder Neuveröffentlichung eine neue und von der Implementierungssprache unabhängige technische Lehre zur Lösung eines Problems enthält.
+. Bei auf spezifische Kundenanforderungen (z.B. für andere Konzernunternehmen) erstellten Beiträgen muss die vertragliche Situation mit dem Kunden (Rechte, Vertraulichkeit) geklärt werden. Wenn die Rechte beim Kunden liegen, so muss dieser die Veröffentlichung genehmigen.
+. Nicht nur Urheberrechte Dritter, sondern auch Softwarepatente, Markenrechte und andere Rechte Dritter können einer geplanten Contribution oder Neuveröffentlichung entgegenstehen.
+. Für jedes geplante Contributions- oder Neuveröffentlichungsvorhaben ist eine Risikobewertung zu erstellen. Der Umfang der Risikobewertung hängt vom Risiko ab.
+. Falls dem Open Source Projekt bzw. der Contribution ein Contributor Agreement oder andere Bedingungen zugrunde liegen, sind diese auf Veranlassung des Antragstellers vorab zentral pro Agreementversion durch den {open-source-manager} vorab zu prüfen. Der {open-source-manager} bezieht dabei die Rechtsabteilung entsprechen der {richtlinie-risikominimierung} ein.
+. Aus der dem Antrag beiliegenden Kosten- und Risikoeinschätzung müssen sich die mit der Contribution bzw. Neuveröffentlichung angestrebten Vorteile und die möglichen Nachteile für {firma} und {firma-generell} ergeben.
+. Bei Neuveröffentlichungen wählt der Antragsteller eine für das neue Open Source Projekt geeignete Lizenz aus und begründet die Auswahl, falls er nicht eine der im Onlineformular angebotenen Standardlizenzen verwendet. Diese Lizenz muss bei der Neuveröffentlichung mit enthalten sein.
+. Beim Umgang mit Open Source Projekte, Diskussionsforen usw. gelten die Grundsätze zum Umgang mit den sozialen Medienfootnote:[Siehe auch die {umgang-soziale-medien}] des Konzerns, siehe auch {richtlinie-kommunikation}. Insbesondere dürfen keine Aussagen im Namen des Unternehmens getroffen werden, aus denen sich Verpflichtungen für die {firma-generell} ableiten lassen.
+
+=== Freigabeprozess
+
+Der Freigabeprozess unterliegt folgenden Rahmenbedingungen:
+
+[arabic]
+. Bei Contributions und Neuveröffentlichungen bis zu einem Wert von {threshold-value} ist die Freigabe durch die Führungskraft des Antragstellers oder durch den für das Thema verantwortlichen Product Owner ausreichend.
+. Bei Contributions oder Neuveröffentlichungen ab einem Wert von {threshold-value} oder einem wirtschaftlichen Risiko größer {threshold-value} ist eine zweite Freigabe durch den {open-source-manager} oder den {open-source-board-member} erforderlich.
+. Der Freigabeprozess erfolgt in Abstimmung mit dem {open-source-manager}, der für die notwendige Qualifizierung der Antragsteller und Freigebenden sorgt.
+
+Der Freigabeprozess erfolgt elektronisch per Email:
+
+[arabic, start=4]
+. Der Antragsteller füllt den {link-antrag} mit den Details zur Contribution bzw. der Neuveröffentlichung aus und schickt die notwendigen Dokumente per Email an den zuständigen Freigebenden und den {open-source-manager}.
+. Der Freigebende prüft das Vorhaben und die Risikobewertung in Abstimmung mit dem {open-source-manager}. Bei Bedarf führt der {open-source-manager} eine technische und inhaltliche Prüfung durch und bindet bei Rechtsfragen entsprechend der {richtlinie-risikominimierung} die Rechtsabteilung ein.
+. Der {open-source-manager} dokumentiert und archiviert die Entscheidung und ihre Grundlage.
+. Der Freigebende teilt die Entscheidung zur Contribution bzw. Neuveröffentlichung per Email dem Antragsteller mit, Kopie an den {open-source-manager}. Diese Email muss digital signiert oder anderweitig authentifiziert werden. In der Mail beauftragt der Freigebende den Antragsteller, die Contribution bzw. Neuveröffentlichung im Namen der {firma} durchzuführen.
+. Bei wiederkehrenden Beiträgen gelten zudem die Auflagen für wiederkehrende Beiträge (s.u.)
+
+=== Contribution
+
+Im Fall der Freigabe der Contribution ist der Antragsteller damit beauftragt, die Contribution unter Berücksichtigung der Rahmen- und Lizenzbedingungen des Open Source Projektes durchzuführen. Dabei ist der Beitrag als „im Auftrag der {firma-formell}“ kenntlich zu machen. Beim Einsatz von Versionskontrollsystemen wie git muss die dienstliche Emailadresse für die Commits benutzt werden. Beim Einsenden von Patches per Email müssen diese von der dienstlichen Emailadresse aus eingesendet werden. Der Antragsteller darf für die Interaktion mit dem Open Source Projekt, z.B. auf GitHub, seine persönlichen Onlineidentitäten benutzen.
+
+Die Contribution erfolgt im Namen der {firma}.
+
+=== Neuveröffentlichung
+
+Im Fall der Freigabe der Neuveröffentlichung ist der Antragsteller damit beauftragt, die Neuveröffentlichung unter Angabe der gewählten Open Source Lizenz durchzuführen. Dabei ist der Beitrag als „im Auftrag der {firma-formell}“ kenntlich zu machen. Beim Einsatz von Versionskontrollsystemen wie git muss die dienstliche Emailadresse für die Commits benutzt werden. Beim Einsenden von Patches per Email müssen diese von der dienstlichen Emailadresse aus eingesendet werden. Der Antragsteller darf für die Veröffentlichung des Open Source Projekts, z.B. auf GitHub, seine persönlichen Onlineidentitäten benutzen.
+
+Die Neuveröffentlichung erfolgt im Namen der {firma}.
+
+Bei Neuveröffentlichungen gelten zudem immer die Auflagen für wiederkehrende Beiträge.
+
+=== Auflagen für wiederkehrende Beiträge
+
+Bei wiederkehrenden Beiträgen erfolgen mehrere Contributions zum selben Projekt über einen längeren Zeitraum. Die Freigabe der Open Source Contribution oder Neuveröffentlichung gilt bis auf weiteres. Sobald sich eine der folgenden Rahmenbedingungen oder Angaben aus dem Antrag ändern, erlischt die Freigabe. Bei Bedarf müssen die (neuen) Autoren den Freigabeprozess bzw. vereinfachten Freigabeprozess neu durchlaufen:
+
+* Neue Autoren, Führungskräfte oder Product Owner.
+* Neue Themenfelder.
+* Neue Risiken über {threshold-value}.
+
+Darüber hinaus müssen für wiederkehrende Beiträge regelmäßig, spätestens alle 12 Monate, die Antragsteller per Email dem {open-source-manager} über den Status ihrer Beiträge berichten und dabei auch die getroffenen Maßnahmen zur dauerhaften Einhaltung der o.g. Kriterien nennen.
+
+=== Contributions zu von {firma} geführten Projekten
+
+Für Projekte, die von {firma} als Maintainer geführt werden, gilt ein vereinfachter Contribution-Prozess für {firma} Mitarbeiter.  Voraussetzung ist, dass für diese Projekte eine Freigabe als Neuveröffentlichung erfolgt ist, und die Maintainer des Projektes in der Freigabe genannt sind.
+
+{firma} Mitarbeiter können Contributions zu diesen Projekten leisten, ohne eine separate Freigabe zu benötigen. Sie müssen sich vor der Contribution mit den Rahmenbedingungen für Contributions, die in dieser Richtlinie festgelegt sind, vertraut machen. Die Maintainer der Projekte sind verantwortlich dafür, dass die Rahmenbedingungen eingehalten werden.
+
+Im Rahmen der jährlichen Überprüfung für wiederkehrende Contributions muss die Liste der Autoren aktualisiert werden, so dass sie alle von {firma} getätigten Contributions erfasst.
+
+include::contribution-richtlinie-trailer.adoc[]
