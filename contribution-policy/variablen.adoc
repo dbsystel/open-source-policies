@@ -1,0 +1,18 @@
+// Platzhalter für Begriffe und Rollen, die unternehmenspezifisch ersetzt werden. Entferne den Kommentar und füge den entsprechenden Wert ein.
+
+// :richtlinien-id: Richtlinie-XXXX
+// :open-source-manager: Open Source Manager
+// :open-source-board-member: Chief Technology Officer
+// :firma: ExampleCorp
+// :firma-formell: ExampleCorp GmbH
+// :firma-generell: ExampleGroup
+// :klassifizierung-intern: Intern
+// :klassifizierung-offen: Offen
+// :public-link: https://example.com/open-source-policies[GitHub]
+// :link-einsatzrichtlinie: https://example.com/rilXXXX[ExampleCorp Ril-XXXX: Open-Source-Einsatzrichtlinie]
+// :kontakt-patentabteilung: Patentabteilung von ExampleCorp per Email an patent@example.com
+// :richtlinie-risikominimierung: Richtline Risikominimierung (XXXX)
+// :umgang-soziale-medien: https://example.com/social-media-policy[Tipps zur Kommunikation in sozialen Netzwerken] von ExampleCorp Communications
+// :richtlinie-kommunikation: Richtlinie Kommunikation (XXXX)
+// :threshold-value: 99.999€
+// :link-antrag: https://example.com/opensourcecontribution[Online-Antrag]

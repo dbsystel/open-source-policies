@@ -105,7 +105,7 @@ The approval process is carried out electronically by email:
 
 [arabic, start=4]
 . The Applicant fills in the {link-application} with the details of the Contribution or the New Publication and sends the necessary documents by email to the responsible Approver and the {open-source-manager}.
-. The Approver checks the project and the risk assessment in consultation with the {open-source-manager}. If necessary, the {open-source-manager} carries out a technical and content review and involves the legal department in legal issues in accordance with the {risk-minimization-guideline}.
+. The Approver checks the project and the risk assessment in consultation with the {open-source-manager}. If necessary, the {open-source-manager} carries out a technical and content review and involves the legal department in legal issues in accordance with the {guideline-risk-minimization}.
 . The {open-source-manager} documents and archives the decision and its basis.
 . The Approver informs the Applicant of the decision to do a Contribution or New Publication by email, with a copy to the {open-source-manager}. This email must be digitally signed or otherwise authenticated. In the email, the Approver instructs the Applicant to carry out the Contribution or New Publication on behalf of {company}.
 . In the case of recurring Contributions, the rules for recurring Contributions also apply (see below).

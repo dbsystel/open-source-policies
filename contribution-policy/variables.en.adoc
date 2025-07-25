@@ -1,0 +1,18 @@
+// Placeholders for terms and roles to be replaced by organization-specific values. Remove the comment and insert the appropriate value.
+
+// :guideline-id: Guideline-XXXX
+// :open-source-manager: Open Source Manager
+// :open-source-board-member: Chief Technology Officer
+// :company: ExampleCorp
+// :company-formal: ExampleCorp Ltd.
+// :company-general: ExampleGroup
+// :classification-internal: Internal
+// :classification-open: Public
+// :public-link: https://example.com/open-source-policies[GitHub]
+// :link-usage-policy: https://example.com/guidelineXXXX[ExampleCorp Guideline-XXXX: Open Source Usage Guideline]
+// :contact-patent-department: Patent Department of ExampleCorp via email at patent@example.com
+// :guideline-risk-minimization: Guideline Risk Minimization (XXXX)
+// :social-media-guidelines: https://example.com/social-media-policy[Tips for communication in social networks] by ExampleCorp Communications
+// :communication-guideline: Communication Guideline (XXXX)
+// :threshold-value: 99,999€
+// :link-application: https://example.com/opensourcecontribution[Online Application]
