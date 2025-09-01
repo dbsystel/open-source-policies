@@ -1,0 +1,15 @@
+// Platzhalter für Begriffe und Referenzen, die unternehmenspezifisch ersetzt werden. Entferne den Kommentar und füge den entsprechenden Wert ein.
+
+// :open-source-strategie: _Link zu Open-Source-Strategie_
+// :open-source-einsatzrichtlinie: _Link zu Einsatzrichtlinie_
+// :open-source-einsatzrichtlinie-auswahl: _Link zu Auswahl-Abschnitt in Einsatzrichtlinie_
+// :referenz-adrs: _Link zu Erklärung von ADRs_
+// :details-sammlung-bewertungen: _Link zu Erklärung wie Bewertungen gesammelt werden_
+// :footnote-sicherheit: _Fußnote mit Hinweis auf Sicherheitsvorgaben_
+// :lizenz-kompass: _Link zu Dokument zur Bewertung und Freigabe von Open-Source-Lizenzen_
+// :referenz-behebungsfristen: _Verweis auf Behebungsfristen_
+// :sbom: _Link zu Erklärung, was eine SBOM ist_
+// :verpflichtung-sbom-erstellung: _Verweis auf Verpflichtungen, wie SBOMs erstellt werden müssen_
+// :compliance-scanner: _Link zu Compliance-Scan-Tool_
+// :threshold-positive: _Mindestzahl von positiven Indikatoren_
+// :threshold-negative: _Höchstzahl von negativen Indikatoren_

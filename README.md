@@ -9,6 +9,7 @@ Collection of Open Source related policies at DB Systel GmbH.
 ## Policies
 
 * [Open Source Contribution Policy](contribution-policy)
+* [Open Source Usage Policy](usage-policy)
 * [DB Inner Source License](inner-source-license)
 
 ## License

@@ -1,0 +1,348 @@
+include::auswahl-von-open-source-software-preamble.adoc[]
+
+## Auswahl von Open-Source-Software
+
+Der Einsatz von Open-Source-Software kann erhebliche Vorteile bringen. Deshalb wollen wir, gemäß unserer {open-source-strategie}, die Verwendung von Open-Source-Software weiter ausbauen. Den Rahmen dafür definiert die {open-source-einsatzrichtlinie}. Es kann schwierig sein, in der großen Menge der verfügbaren Open-Source-Software die richtige auszuwählen. {open-source-einsatzrichtlinie-auswahl} der Einsatzrichtlinie definiert einige grundsätzliche Kriterien. Dieses Dokument ergänzt diese Kriterien durch detailliertere Handlungsempfehlungen.
+
+### Auswahlverfahren
+
+Bei der Auswahl von Open-Source-Software sind immer zwei Sichten zu berücksichtigen. Da ist zunächst die übergreifende Sicht auf die einzusetzende Software, die dahinterstehende Community und das damit verbundene Ökosystem. Sie umfasst die Erfassung von Fakten wie Lizenz, Release-Zyklus, Art und Größe der Entwickler-Community, Vertrauenswürdigkeit, Sicherheit, etc. Diese Sicht ist unabhängig vom konkreten Einsatz.
+
+Die zweite Sicht betrachtet den konkreten Einsatz im Kontext des Projektes, in dem die Software zum Einsatz kommt. Dies schließt die kontext-spezifische Bewertung der erfassten Fakten ein, zum Beispiel die Bewertung der Lizenz im Projekt-Kontext, Vergleich von Anforderungen an Support und verfügbaren Support-Optionen, Betrachtung des Lebenszyklus der Software im Blick auf den Lebenszyklus des Projektes, technische Alternativen, etc.
+
+Aus der Kombination der beiden Sichten können Entscheidungen über die Auswahl von eingesetzter Open-Source-Software abgeleitet werden. Diese müssen dokumentiert werden, zum Beispiel durch ADRs (siehe {referenz-adrs}). Die folgenden Abschnitte definieren Kriterien, anhand derer die Entscheidungen getroffen werden können.
+
+Für die Analyse der übergreifenden einsatz-unabhängigen Sicht bietet es sich an, Ergebnisse zentral zu sammeln, sodass die Analyse-Arbeit derselben Open-Source-Software nicht mehrfach gemacht werden muss. {details-sammlung-bewertungen}
+
+Viele Informationen finden sich im Repository mit dem Source-Code. Insbesondere die Dateien, die üblicherweise benutzt werden, um Informationen über das Projekt zu kommunizieren, wie `README`, `CONTRIBUTING` oder `SECURITY`, sind hier hilfreichfootnote:[Oft sind diese Dateien im Markdown-Format (`.md`). Sie können aber auch in anderen Formaten und damit mit anderen Datei-Endungen vorliegen.].
+
+### Auswahlkriterien
+
+Die folgenden Kriterien beziehen sich hauptsächlich auf Software, die direkt als Open-Source-Software eingesetzt wird, also nicht über einen Hersteller bezogen wird, der Support übernimmt. Zu Open-Source-Software, die als Teil eingekaufter Software eingesetzt wird, siehe das nachfolgende Kapitel "Open-Source-Software als Teil von eingekaufter Software".
+
+Die Kriterien decken vor allem Aspekte ab, die spezifisch für Open-Source-Software zu betrachten ist. Daneben gibt es natürlich noch weitere Aspekte, die bei jeder Art von Software betrachtet werden müssen, wie passende Funktionalität, Erfüllung von nicht-funktionalen Anforderungen, Sicherheit{footnote-sicherheit}, Qualität oder Dokumentation.
+
+Die Kriterien und dazugehörigen Indikatoren sind nicht als feste Formel gedacht. Sie sollen den Blick auf zu beachtende Aspekte lenken und eine aktive Auseinandersetzung mit der Bewertung von Open-Source-Software fördern. Je nach Projekt können einzelne Kriterien und Indikatoren mehr oder weniger aussagekräftig sein. Letztendlich muss immer eine inhaltliche Abwägung getroffen werden.
+
+#### Lizenzen
+
+Vorbedingung für den Einsatz von Open-Source-Software ist, dass die Lizenz, unter der die Software zur Verfügung steht, den Einsatz zulässt und die im Projekt definierten Kriterien erfüllt. Neben den in der Einsatzrichtlinie definierten Kriterien gibt der {lizenz-kompass} den Entscheidungsprozess vor, und enthält die Beschreibung und Bewertung der einzelnen Open-Source-Lizenzen.
+
+Unklare Lizenzen sind ein Warnsignal dafür, dass das Projekt keine hohen Qualitätsstandards anlegt, und haben rechtliche Risiken zur Folge. Dies kann sich in fehlenden oder unvollständigen Angaben zur Lizenz ausdrücken oder der Verwendung von nicht geeigneten Lizenzen (z.B. Verwendung von Creative Commons Lizenzen für Code).
+
+Der https://reuse.software[REUSE-Standard] ist ein zunehmend populärer Weg, um vollständige Klarheit über die in einem Projekt verwendeten Lizenzen herzustellen. Wenn ein Open-Source-Projekt diesem Standard folgt und Lizenzen entsprechend kenntlich macht, ist das ein klarer Indikator für verantwortlichen Umgang mit Lizenzen und stellt alle Informationen für eine genaue Bewertung des Projektes für den angestrebten Einsatz bereit.
+
+*-> Muss-Indikator: Die Lizenz der Software muss den Einsatz zulassen und den Projekt-Policies entsprechen*
+
+*-> Positiv-Indikator: Repository ist REUSE-compliant*
+
+*-> Negativ-Indikator: Lizenz ist unklar*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Prüfe `LICENSE`-Datei oder `LICENSES`-Verzeichnis im Source-Code Repository
+* Prüfe Lizenzhinweise im `README`
+* Prüfe auf REUSE-Badge und/oder überprüfe den Code mit REUSE-Linter
+* Gleiche Lizenzen mit dem {lizenz-kompass} ab
+* Gleiche Lizenzen mit der Lizenz-Policy des einsetzenden Projektes ab
+
+#### Wirtschaftliches Ökosystem
+
+Um breit aufgestellte, populäre Open-Source-Projekte existiert häufig ein Ökosystem von kommerziellen Partnern. Das ist zum einen ein Zeichen für die Gesundheit und Langlebigkeit eines Projektes, und zum anderen eröffnet es Möglichkeiten, Support und andere Unterstützung einzukaufen, ohne in Abhängigkeiten von einzelnen Herstellern zu geraten. Insbesondere für den Einsatz in kritischen Projekten ist es von Vorteil, auf ein stabiles Ökosystem zurückgreifen zu können.
+
+Open-Source-Projekte, bei denen ein einzelner Hersteller die Kontrolle über die Entwicklung hat, bezeichnet man als Single-Vendor-Projekte. Hier besteht das Risiko, dass Entscheidungen des Herstellers negative Auswirkungen auf Nutzende haben. Es besteht eine Abhängigkeit von einem einzelnen Hersteller, wenn die einzige Alternative darin besteht, auf ein anderes Projekt oder Produkt zu wechseln.
+
+Insbesondere bei Single-Vendor-Projekten von Herstellern, die durch Venture-Capital finanziert sind, haben in der Vergangenheit immer wieder Lizenz-Änderungen Probleme bei Nutzenden verursacht.footnote:[Siehe https://meshedinsights.com/2021/02/02/rights-ratchet/[Simon Phipps: The Rights-Ratchet Model]]
+
+*-> Positiv-Indikator: Es gibt ein diverses Ökosystem von kommerziellen Partnern*
+
+*-> Negativ-Indikator: Projekt wird von einem einzelnen Hersteller kontrolliert*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Schätze ein, von welchen Firmen die Contributoren kommen, zum Beispiel über die Profile der Contributoren auf GitHub
+* Suche nach Firmen, die Support für das Open-Source-Projekt leisten
+* Prüfe `README`, Homepage und gegebenenfalls GitHub-Organisation des Projektes um festzustellen, ob es sich um ein Single-Vendor-Projekt handelt
+
+#### Diversität der Community
+
+Damit Open-Source-Projekte eine lange Lebensdauer haben und nicht in Mitleidenschaft gezogen werden, wenn Menschen das Projekt verlassen, ist es hilfreich, eine diverse Entwickler-Community zu haben. Wenn viele verschiedene Personen, insbesondere auch von verschiedenen Firmen, zu einem Projekt beitragen, macht das das Projekt resilienter.
+
+Es gibt auch sehr viele Projekte, die hauptsächlich oder sogar ausschließlich durch eine einzelne Person entwickelt werden. Oder es ist ein Projekt, bei dem zwar viele diverse Beteiligte mit häufig kleinen Beiträgen aufgeführt sind, aber nur eine Person über Schreibrechte verfügt. Dies stellt ein Risiko dar, da solche Projekte oft nicht weitergeführt werden, wenn diese Person das Projekt aufgibt.
+
+Viele Open-Source-Projekte werden in Foundations gehostet, unabhängigen Organisationen, die eine neutrale Basis für die Zusammenarbeit bieten. Dies hat einen positiven Einfluss auf Langlebigkeit und Diversität des Projektes und geht meist mit hohen Qualitätsstandards einher. Deswegen stellen Foundations einen Positiv-Faktor dar.
+
+Populäre Projekte haben meist eine größere, diversere und auch aktivere Community. Dies lässt sich durch Download-Zahlen, GitHub-Stars und ähnliche Metriken bewerten.
+
+Open-Source-Lizenzen garantieren fundamentale Freiheiten bei der Nutzung der Software, schreiben aber kein offenes Entwicklungsmodell vor. Wenn ein Open-Source-Projekt einen offenen Ansatz verfolgt, der Transparenz über die Entwicklung garantiert und Mitgestaltung ermöglicht, kommt das auch Nutzern zu Gute. Man bezeichnet das oft als Open Governance.footnote:[Siehe auch https://opengovernance.dev]
+
+*-> Positiv-Indikator: Entwickler-Community besteht aus diversen Personen und Organisationen*
+
+*-> Positiv-Indikator: Projekt ist Teil einer Foundation*
+
+*-> Positiv-Indikator: Projekt wird in einem Open-Governance-Modell betrieben*
+
+*-> Negativ-Indikator: Projekte wird von einer einzelnen Person entwickelt*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Prüfe Contributors-Überblick auf GitHub
+* Prüfe Git-Historie, wieviele Personen contributen
+* Prüfe Metriken wie GitHub-Stars, um Popularität des Projektes einzuschätzen
+* Prüfe `README`, Homepage und gegebenenfalls GitHub-Organisation, um festzustellen, ob Projekt Teil einer Foundation ist
+* Prüfe `README` und `CONTRIBUTING`, um Governance-Modell des Projektes zu analysieren
+
+#### Aktivität der Community
+
+Aktive Communities haben den Vorteil, dass sie zu einer diversen Entwickler-Community beitragen, aber auch dass es Menschen gibt, die bei Problemen helfen. Sie sind auch ein Zeichen für eine hohe Reife eines Projekts.
+
+In manchen Fällen erfüllt eine Open-Source-Software die technischen Anforderungen, es gibt aber keine aktive Community mehr, die die Software pflegt und weiterentwickelt. Dies kann negative Effekte haben, da veraltete Technologie verwendet werden kann und Nutzer auf sich alleine gestellt sind bei Verbesserungen und Fehlerbehebungen.
+
+Es muss allerdings auch berücksichtigt werden, dass es auch gute Gründe für unterschiedliche Aktivitäts-Niveau geben kann. Ein reifes, stabiles Projekt wird oft weniger Code-Änderungen erfahren als ein Projekte, die sich noch in ihrer Anfangsphase befinden.
+
+*-> Positiv-Indikator: Community ist aktiv, Projekt wird kontinuierlich weiterentwickelt*
+
+*-> Negativ-Indikator: Die letzten Änderungen am Projekt sind lange her bzw. passieren nur sehr sporadisch.*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Prüfe Git-Historie auf Aktivität
+* Prüfe andere Projektaktivitäten, wie Antworten auf Issues, oder Aktivität in Foren und Mailinglisten
+* Prüfe, wann und wie oft Releases des Projektes gemacht werden
+
+#### Transparenz des Projektes
+
+Um bewerten zu können, ob ein Open-Source-Projekt die Support-Ansprüche für den angestrebten Einsatzzweck erfüllt, ist es hilfreich, wenn explizite Aussagen zum Lebenszyklus des Projekts bestehen, zum Beispiel welche Versionen wie lange gepflegt werden. Insbesondere bei reifen Projekten gibt es oft verschiedene Entwicklungszweige, die mit unterschiedlichen Support-Garantien kommen. Zweige, die explizit nicht mehr supported werden, sollten vermieden werden.
+
+Um bewerten zu können, ob der Lebenszyklus eines Open-Source-Projekts zum Einsatzzweck passt, ist es zudem hilfreich, wenn es explizite Roadmaps gibt. Verlässliche Release-Kadenzen können eine ähnliche Funktion erfüllen.
+
+Bei manchen Projekten agiert das Entwickler-Team nicht vollständig in der Öffentlichkeit. So kann zwar der Code offen verfügbar sein, aber zum Beispiel die Planung, Backlogs und ähnliches finden hinter verschlossenen Türen statt. Dies macht es schwer, die Richtung eines Projektes zu beurteilen und auf Eignung für die eigenen Zwecke zu prüfen.
+
+*-> Positiv-Indikator: Es gibt einen definierten Lebenszyklus*
+
+*-> Positiv-Indikator: Explizite Roadmaps*
+
+*-> Negativ-Indikator: Planung der Entwicklung ist nicht transparent*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Prüfe `README`, Homepage und Dokumentation auf Informationen zu Lebenszyklus und Roadmaps
+* Prüfe, ob GitHub-Issue-Tracker benutzt wird oder ein ähnliches öffentliches Tool
+
+#### Contributions
+
+Wenn Fehler oder Schwachstellen in eingesetzter Software behoben werden müssen, kann es notwendig sein, selbst Änderungen an der Software vorzunehmen, zum Beispiel, um Behebungsfristen einhalten zu können (siehe {referenz-behebungsfristen}). Wenn die dafür notwendige Expertise vorhanden ist, trägt dies zu einem stabilen Betrieb bei. Wenn nicht, muss auf andere Möglichkeiten zurückgegriffen werden; dann werden Kriterien wie das Ökosystem um die Software wichtiger.
+
+Wenn Änderungen an eingesetzter Open-Source-Software notwendig werden, sollten diese Änderungen immer zurück in die Upstream-Projekte gegeben werden, so dass keine lokalen Forks entstehen. Änderungen, die lokal gepflegt werden müssen, können einen erheblichen Aufwand verursachen, der mit der Zeit immer weiter zunimmt. Dies kann verhindert werden, wenn ein Projekt es einfach macht, Beiträge zu leisten (vor allem Contributions zu Code, aber auch Contributions zu Dokumentation oder andere Formen der Mitarbeit).
+
+Open-Source-Projekte, die Contributor License Agreements (CLAs) für Contributions fordern, erschweren das Beitragen. Sie sind oft auch verbunden mit anderen Negativ-Kriterien, wie zum Beispiel Kontrolle durch einen einzelnen Hersteller.
+
+*-> Positiv-Indikator: Einsetzendes Team hat Expertise, um selbst Änderungen vorzunehmen*
+
+*-> Positiv-Indikator: Projekt macht es einfach, selbst Beiträge zu leisten*
+
+*-> Negativ-Indikator: Es gibt Contributor License Agreements (CLAs)*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Gleiche verwendete Programmiersprachen und Frameworks mit Expertise des Teams ab
+* Prüfe `CONTRIBUTING`, um den Contribution-Prozess zu verstehen und zu bewerten
+* Prüfe aktuelle und vergangene Pull-Requests, um zu sehen, wie Contributions genau ablaufen
+* Prüfe weitere Kommunikationskanäle wie Mailinglisten, Foren und ähnliches, wo die Entwicklung diskutiert wird
+* Überprüfe, ob kulturelle oder Sprachbarrieren existieren, die das Interagieren mit dem Projekt erschweren könnten
+* Prüfe `CONTRIBUTING` darauf, ob ein CLA erwähnt wird
+* Prüfe in `.github/workflows/` und kürzlichen Pull Requests, ob der CLA-Assistant benutzt wird
+
+#### Umgang mit Problemen
+
+Projekte, die einen hohen Standard beim Umgang mit Sicherheitsproblemen haben, haben in der Regel explizite Policies, sowohl für das Berichten von Problemen, als auch für den Umgang damit und das Veröffentlichen von Sicherheitsupdates. Dies erleichtert den sicheren Betrieb dieser Projekte.
+
+Durch die Offenheit von Open-Source-Projekten kann man relativ leicht überprüfen, wie das Projekt in der Vergangenheit auf Bug-Reports oder Sicherheitsprobleme reagiert hat. Dies kann als Indikator dienen, um das Projekt hinsichtlich eigener Anforderungen an Reaktionszeiten und ähnliches zu bewerten.
+
+Der Einblick in die Kommunikation des Projektes mit Nutzern kann viele Hinweise ergeben, wie das Projekt agiert, sowohl von einer technischen als auch einer kulturellen Sicht. So lässt sich auch bewerten, ob und inwieweit Support durch die Community zu erwarten ist.
+
+*-> Positiv-Indikator: Es gibt Policies für den Umgang mit Sicherheitsproblemen*
+
+*-> Positiv-Indikator: Es gibt eine Historie zuverlässiger Reaktion auf Probleme*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Prüfe `SECURITY`-Datei
+* Prüfe Release-History
+* Prüfe Kommunikationskanäle des Projektes, z.B. Issues, Pull-Requests, Mailing-Lists, Foren
+
+#### Qualität
+
+In vielen Fällen wird man Open-Source-Software nicht direkt aus der Entwickler-Community beziehen, sondern zum Beispiel über einen Distributor. Das klassische Beispiel dafür sind Linux-Distributionen. Diese fügen eine zusätzliche Qualitätssicherungsebene hinzu, die einen zuverlässigeren Einsatz ermöglichen kann.
+
+Darüber hinaus bietet Open Source prinzipbedingt die Möglichkeit, sich selbst einen Eindruck über die Qualität zu machen, da Source-Code und viele andere Artefakte öffentlich verfügbar sind.
+
+*-> Positiv-Indikator: Zusätzliche Qualitätssicherungsebene*
+
+*-> Positiv-Indikator: Source-Code hat hohe Qualität*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Prüfe Vertriebskanäle für Projekt, zum Beispiel Linux-Distributionen, Cloud-Provider, etc.
+* Analysiere Qualität des Source-Codes
+* Prüfe Existenz und Qualität von Dokumentation (Architektur, Quelltext-Doku, Installationsanleitung, Contribution Anleitung, Tutorials, Benutzerhandbuch, etc.)
+
+#### Badges
+
+Das https://bestpractices.coreinfrastructure.org/de[Best Practices Badge Program] der Open Source Security Foundation (OpenSSF) ist eine Selbstzertifizierung nach einer großen Anzahl von Kriterien, die Projekt-Qualität widerspiegeln. Es gibt Badges auf verschiedenen Ebenen, die sich durch die Zahl der eingehaltenen Kriterien unterscheiden. Die Badges können einen klaren Hinweis auf die Qualität eines Open-Source-Projekts darstellen.
+
+*-> Positiv-Indikator: Projekt hat eine Badge des Best Practices Badge Program der Open Source Security Foundation*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Prüfe `README`, ob eine Badge enthalten ist
+
+#### Aufwand, die Software zu ersetzen
+
+Faktoren wie fehlende Kontinuität in der Entwicklung, nicht behebbare Schwachstellen, Lizenzänderungen oder fehlende Übereinstimmung der Ausrichtung und des Lebenszyklus zwischen Open-Source-Projekt und einsetzendem Projekt können dazu führen, dass Software-Komponenten durch andere ersetzt werden müssen. Der dafür nötige Aufwand geht in die Bewertung der Konsequenzen bei eintretenden Risiken ein.
+
+Software, die modular aufgebaut ist, Standard-Schnittstellen und Formate verwendet, oder Software, die aus einem Ökosystem mit konkurrierenden Alternativen kommt, ist leichter zu ersetzen als Software, die sehr tief mit der eigenen Architektur verwoben ist oder für die es keine ähnlichen Alternativen gibt.
+
+*-> Positiv-Indikator: Der Aufwand, um die Software durch Alternativen zu ersetzen, ist gering*
+
+*-> Negativ-Indikator: Es gibt keine ähnlichen Alternativen für die eingesetzte Software*
+
+Mögliche Maßnahmen zur Überprüfung der Indikatoren:
+
+* Prüfe, welche Optionen existieren, um die Software zu ersetzen
+* Schätze Aufwand, um Software zu ersetzen
+
+#### Projektspezifische Kriterien
+
+Natürlich muss die ausgewählte Software auch die projektspezifischen Kriterien erfüllen, die aus dem Einsatzzweck entstehen, zum Beispiel fachliche Anforderungen oder Qualitätskriterien. Diese Kriterien gelten unabhängig davon, ob sie durch Open-Source-Software oder Software unter anderen Lizenzen erfüllt werden.
+
+### Konsequenzen
+
+Die Auswahl von Open-Source-Software hat Konsequenzen im einsetzenden Projekt. Die Möglichkeit zur direkten Interaktion mit der Community bietet Chancen, verursacht aber auch Aufwände. Diese Aufwände sollten im Rahmen des Projektes mit eingeplant werden.
+
+Änderungen an Open-Source-Projekten, auch kleinere Bug-Fixes, sollten zum Beispiel immer als Contribution zurück in das Projekt gegeben werden. So können sie im Upstream-Open-Source-Projekt gepflegt werden und es entstehen keine Aufwände, Änderungen an zukünftige Releases anzupassen. Hier auf die Contributions zu verzichten, kann langfristig hohe Kosten verursachen. Deshalb ist es im ureigensten Interesse jeden Teams, das Open-Source-Software einsetzt, die Interaktion mit der Community als einen inheränten Bestandteil seiner Arbeit einzuplanen.
+
+### Abhängigkeiten
+
+Die meiste Open-Source-Software enthält oder benötigt weitere Software-Module, von denen sie abhängig ist. Dies schließt direkte Abhängigkeiten ein, aber ebenso indirekte Abhängigkeiten, das heißt Abhängigkeiten von Abhängigkeiten (auch transitive Abhängigkeiten genannt).
+
+Grundsätzlich muss immer der komplette Abhängigkeitsgraph betrachtet werden. Er sollte mittels einer {sbom} erfasst werden. {verpflichtung-sbom-erstellung}
+
+Für manche Fragestellungen, zum Beispiel das Risiko von Schwachstellen oder Lizenz-Compliance, ist es irrelevant, an welcher Stelle des Abhängigkeitsbaums das Modul sich befindet. Mögliche Probleme betreffen immer die komplette Software.
+
+Für andere Fragestellungen kann es ausreichen, nur einen Teilbaum zu betrachten. Soll beispielsweise der Aufwand für das Ersetzen eines Moduls ermittelt werden, reicht die Betrachtung direkter Abhängigkeiten,
+
+Mögliches praktisches Vorgehen:
+
+* Analyse direkter Abhängigkeiten mit Hilfe der in diesem Dokument beschriebenen Kriterien
+* Dokumentation der Entscheidung zum Einsatz von direkten Abhängigkeiten in ADRs
+* Automatisiertes Scannen von indirekten Abhängigkeiten mit Hilfe geeigneter Tools (z.B. {compliance-scanner}), um Probleme durch Schwachstellen und ungeeignete Lizenzen zu finden und zu beheben
+
+### Open-Source-Software als Teil von eingekaufter Software
+
+Wenn Software-Produkte oder Dienste eingekauft werden, werden sie in aller Regel auch Open-Source-Komponenten enthalten. In diesem Fall ist jedoch der Hersteller verantwortlich für Auswahl und Pflege der Komponenten. Es kann dennoch auch Verantwortung beim Einsetzenden entstehen, zum Beispiel, wenn eingekaufte Komponenten an Dritte weitergegeben werden.
+
+Zudem kann die Analyse vom durch den Hersteller eingesetzten Komponenten wertvolle Hinweise sowohl zur Bewertung des Herstellers als auch der hergestellten Software bieten. Sie kann auch ein Indikator dafür sein, wie stark die Abhängigkeit von einzelnen Herstellern ist. So lassen sich zum Beispiel Linux-Distributionen meist recht einfach gegeneinander austauschen, da sie in der Regel die gleiche Open-Source-Software enthalten und Unterschiede eher durch Zusammenstellung der Software, zusätzliche Tools, oder Support-Bedingungen entstehen.
+
+Um diese Analyse durchführen zu können, sollte bei eingekaufter Software vom Hersteller eine SBOM gefordert werden.
+
+### Referenzen
+
+* https://www.computer.org/csdl/magazine/co/2019/12/08909944/1f8KJAfHutG[How to Select Open Source Components] - Kurzer Artikel, in dem einige Kriterien beschrieben werden, um Open-Source-Komponenten auszuwählen
+* https://bestpractices.coreinfrastructure.org/de[OpenSSF Best Practices Badge Programm] - Programm der Open Source Security Foundation, um die Qualität von Open-Source-Projekten über festgelegte Kriterien und damit zusammenhängende Badges transparent zu machen
+* https://securityscorecards.dev/[OpenSSF Scorecard] - Automatisierter Test, um Qualität von Open-Source-Projekten zu bewerten, mit Fokus auf Sicherheits-Aspekten
+* https://deps.dev/[Open Source Insights] - Experimentelles Projekt von Google, um Informationen über Abhängigkeiten, einschließlich OpenSSF Score Cards und CVE-Informationen, wo verfügbar
+
+### Anhang: Tabelle zur Bewertung der Indikatoren
+
+Die folgende Tabelle kann als Hilfestellung eingesetzt werden, um die Bewertung der Kriterien nach Indikatoren übersichtlich zusammenzustellen.
+
+In den drei Spalten "Muss", "Positiv", "Negativ" sind Kästchen, die angekreuzt werden, wenn der Indikator eintrifft. Am Ende der Tabelle wird die Anzahl der eingetroffenen Indikatoren aufsummiert und mit einem Zielwert abgeglichen. Die Zielwerte für "Positiv" und "Negativ" können angepasst werden.
+
+Die Spalte "Geprüft" kann verwendet werden, um zu kennzeichnen, dass der Indikator geprüft wurde, auch wenn vielleicht keine Einschätzung im Sinne von "Positiv" oder "Negativ" möglich war.
+
+In der Spalte "Kommentar" können Informationen ergänzt werden, die die Einschätzung zu den Indikatoren erklären.
+
+Die Tabelle gibt eine Einschätzung. Die Aufsummierung ist nicht notwendigerweise der beste Weg, eine Entscheidung zu treffen, da Kriterien und Indikatoren individuell und nach Projektkontext auch stark unterschiedliche Gewichtungen haben können.
+
+// Raw HTML checkbox
+:checkbox: pass:[<input type="checkbox">]
+:sumfield: pass:[<input type="text">]
+
+.Bewertungstabelle für die Auswahl von Open-Source-Software
+[cols="<4,^1,^1,^1,^1,^2"]
+|===
+|Kriterium / Indikator|Muss|Positiv|Negativ|Geprüft|Kommentar
+
+6+|*Lizenzen*
+|Die Lizenz der Software muss den Einsatz zulassen und den Projekt-Policies entsprechen| {checkbox} ||| {checkbox} |
+|Repository ist REUSE-compliant|| {checkbox} || {checkbox} |
+|Lizenz ist unklar||| {checkbox} | {checkbox} |
+
+6+|*Wirtschaftliches Ökosystem*
+
+|Es gibt ein diverses Ökosystem von kommerziellen Partnern|| {checkbox} || {checkbox} |
+|Projekt wird von einem einzelnen Hersteller kontrolliert||| {checkbox} | {checkbox} |
+
+6+|*Diversität der Community*
+
+|Entwickler-Community besteht aus diversen Personen und Organisationen|| {checkbox} || {checkbox} |
+|Projekt ist Teil einer Foundation|| {checkbox} || {checkbox} |
+|Projekt wird in einem Open-Governance-Modell betrieben|| {checkbox} || {checkbox} |
+|Projekte wird von einer einzelnen Person entwickelt||| {checkbox} | {checkbox} |
+
+6+|*Aktivität der Community*
+
+|Community ist aktiv, Projekt wird kontinuierlich weiterentwickelt|| {checkbox} || {checkbox} |
+|Die letzten Änderungen am Projekt sind lange her bzw. passieren nur sehr sporadisch.||| {checkbox} | {checkbox} |
+
+6+|*Transparenz des Projektes*
+
+|Es gibt einen definierten Lebenszyklus|| {checkbox} || {checkbox} |
+|Explizite Roadmaps|| {checkbox} || {checkbox} |
+|Planung der Entwicklung ist nicht transparent||| {checkbox} | {checkbox} |
+
+6+|*Contributions*
+
+|Einsetzendes Team hat Expertise, um selbst Änderungen vorzunehmen|| {checkbox} || {checkbox} |
+|Projekt macht es einfach, selbst Beiträge zu leisten|| {checkbox} || {checkbox} |
+|Es gibt Contributor License Agreements (CLAs)||| {checkbox} | {checkbox} |
+
+6+|*Umgang mit Problemen*
+
+|Es gibt Policies für den Umgang mit Sicherheitsproblemen|| {checkbox} || {checkbox} |
+|Es gibt eine Historie zuverlässiger Reaktion auf Probleme|| {checkbox} || {checkbox} |
+
+6+|*Qualität*
+
+|Zusätzliche Qualitätssicherungsebene|| {checkbox} || {checkbox} |
+|Source-Code hat hohe Qualität|| {checkbox} || {checkbox} |
+
+6+|*Badges*
+
+|Projekt hat eine Badge des Best Practices Badge Program der Open Source Security Foundation|| {checkbox} || {checkbox} |
+
+6+|*Aufwand, die Software zu ersetzen*
+
+|Der Aufwand, um die Software durch Alternativen zu ersetzen, ist gering|| {checkbox} || {checkbox} |
+|Es gibt keine ähnlichen Alternativen für die eingesetzte Software||| {checkbox}| {checkbox} |
+
+6+|
+
+|*_Summen_*
+|{sumfield}
+|{sumfield}
+|{sumfield}
+|{sumfield}
+|
+
+|*_Zielwert_*
+| genau 1
+| größer {threshold-positive}
+| kleiner {threshold-negative}
+| 24
+|
+
+|===
+
+include::auswahl-von-open-source-software-postamble.adoc[]
